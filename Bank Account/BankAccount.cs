@@ -8,6 +8,8 @@ namespace Bank_Account
 {
     public class BankAccount
     {
+        //Properties 'name', 'lastname' and 'age' are needed for open account method
+
         private string name;
         public string Name
         {
@@ -35,10 +37,18 @@ namespace Bank_Account
             set { age = value; }
         }
 
-        private bool isblocked;
-        public bool IsBlocked
+        private bool isopen; // checks whether the account is open
+        public bool IsOpen
         {
-            get { return isblocked; }
+            get { return isopen; }
+        }
+
+        private decimal budget; //budget of the account
+
+        public decimal Budget
+        {
+            get { return budget; }
+            set { budget = value; }
         }
         public void Open()
         {
@@ -61,10 +71,49 @@ namespace Bank_Account
             {
                 Console.WriteLine("Wrong date");
             }
-            if(age < 18)
+            else if(age < 18)
             {
                 Console.WriteLine("You are too young to open bank account");
-                isblocked = true;
+            }
+            else
+            {
+                Console.WriteLine("Your account is open");
+                isopen = true;
+                budget = 0;
+            }
+        }
+
+        public void Deposit(decimal amount)
+        {
+            if(isopen && amount > 0)
+            {
+                budget =+ amount;
+                Console.WriteLine($"You deposit a {amount}$");
+                Console.WriteLine($"Your budget is now {budget}$");
+            }
+            else if(amount <= 0)
+            {
+                Console.WriteLine("Amount must be higher than 0!");
+            }else if(!isopen)
+            {
+                Console.WriteLine("You must open account!");
+            }
+        }
+
+        public void Withdrawl(decimal amount)
+        {
+            if(isopen && amount <= budget)
+            {
+                budget -= amount;
+                Console.WriteLine($"You withdrawl a {amount}$");
+                Console.WriteLine($"Your budget is now {budget}$");
+            }
+            else if(amount <= 0)
+            {
+                Console.WriteLine("Amount must be higher than 0!");
+            }else if (!isopen)
+            {
+                Console.WriteLine("You must open account!");
             }
         }
     }

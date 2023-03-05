@@ -8,7 +8,10 @@
 
             bankAccount.Open();
 
-            Console.WriteLine(bankAccount.IsBlocked);
+            bankAccount.Deposit(200);
+            bankAccount.Withdrawl(50);
+
+            Console.WriteLine(bankAccount.Budget);
         }
     }
 }
