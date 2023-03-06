@@ -62,7 +62,7 @@ namespace Bank_Account
             else
             {
                 Console.WriteLine("To open account we need from you some data");
-                Console.WriteLine("First, let tell us what is your name and last name");
+                Console.Write("First, let tell us what is your name and last name: ");
 
                 var parts = Console.ReadLine().Split(' ');
                 name = parts[0].ToLower().Trim();
@@ -71,7 +71,7 @@ namespace Bank_Account
                 lastname = parts[1].ToLower().Trim();
                 lastname = String.Concat(lastname.Where(c => Char.IsWhiteSpace(c)));
 
-                Console.WriteLine("Now let give us your birthday date in format 'DD-MM-YYYY'");
+                Console.Write("Now let give us your birthday date in format 'DD-MM-YYYY': ");
 
                 var dOb = Console.ReadLine().ToString().Split('-');
 
@@ -86,6 +86,7 @@ namespace Bank_Account
                 else if (age < 18)
                 {
                     Console.WriteLine("You are too young to open bank account");
+                    isopen = false;
                 }
                 else
                 {
@@ -144,19 +145,19 @@ namespace Bank_Account
         /// </summary>
         public void Close()
         {
-            Console.WriteLine("For closing account you need to tell us your name and last name");
+            Console.Write("For closing account you need to tell us your name and last name: ");
             var parts = Console.ReadLine().Split(' ');
             parts[0].ToLower().Trim();
             parts[0] = String.Concat(parts[0].Where(c => Char.IsWhiteSpace(c))); //Deletes empty spaces from string
 
             parts[1].ToLower().Trim();
             parts[1] = String.Concat(parts[1].Where(c => Char.IsWhiteSpace(c)));
-            Console.WriteLine("Now we need your birthday date in the format 'DD-MM-YYYY' ");
+            Console.Write("Now we need your birthday date in the format 'DD-MM-YYYY':  ");
             var dob = Console.ReadLine().Split('-');
             DateTime birthday = new DateTime(int.Parse( dob[2]), int.Parse( dob[1]), int.Parse( dob[0]));
 
             int age = DateTime.Now.Year - birthday.Year;
-            if (parts[0] == name && parts[1] == lastname && age == Age)
+            if (parts[0] == name && parts[1] == lastname && age == Age && isopen == true)
             {
                 Console.WriteLine("Your data is correct. We will withdrawl all your money before closing the account \n");
                 isopen = false;
@@ -177,6 +178,65 @@ namespace Bank_Account
             }
             
         }
+
+        /// <summary>
+        /// This method is a start for the whole application
+        /// </summary>
+        public void Start()
+        {
+            Console.WriteLine("Welcome to the bank account application! ☺");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("Here are listed the following commands:");
+            Console.WriteLine("'Open' - Opens the account ");
+            Console.WriteLine("'Close' - Close the account ");
+            Console.WriteLine("'Deposit' - Deposits the money to the account ");
+            Console.WriteLine("'Withdrawl' - Withdrawl the money from the account ");
+            Console.WriteLine("'Quit' - Quits the application ");
+            Console.WriteLine("-----------------------------------------");
+
+            string input = " ";
+
+            while(!input.Equals("quit"))
+            {
+                input = Console.ReadLine().ToLower().Trim();
+
+                if(input.Equals("open"))
+                {
+                    Open();
+                }
+                if (input.Equals("close"))
+                {
+                    Close();
+                }
+                if (input.Equals("deposit"))
+                {
+                    if (isopen == true)
+                    {
+                        Console.Write("Please enter the desired amount to deposit: ");
+                        Deposit(decimal.Parse(Console.ReadLine()));
+                    }
+                    else
+                    {
+                        Console.WriteLine("You can't make a deposit without open account!");
+                    }
+                }
+                if (input.Equals("withdrawl"))
+                {
+                    if (isopen == true)
+                    {
+                        Console.Write("Please enter the desired amount to withdrawl: ");
+                        Withdrawl(decimal.Parse(Console.ReadLine()));
+                    }
+                    else
+                    {
+                        Console.WriteLine("You can't make a withdrawl without open account!");
+                    }
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Thank you for using the bank account application ☺");
+        }
+
         /// <summary>
         /// This constructor creates the account
         /// </summary>
