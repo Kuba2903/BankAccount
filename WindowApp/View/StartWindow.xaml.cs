@@ -23,5 +23,12 @@ namespace WindowApp.View
         {
             InitializeComponent();
         }
+
+        private void open_accountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenAccountView view = new OpenAccountView();
+            view.Show();
+            this.Close();
+        }
     }
 }

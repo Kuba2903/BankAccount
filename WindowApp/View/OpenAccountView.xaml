@@ -1,0 +1,22 @@
+﻿<Window x:Class="WindowApp.View.OpenAccountView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowApp.View"
+        mc:Ignorable="d"
+        Title="OpenAccountView" Height="300" Width="400">
+    <Canvas>
+        <Label Content="Enter your name:" Canvas.Top="50" />
+        <TextBox x:Name="name_txtbox" MinWidth="100" Canvas.Top="55" Canvas.Left="100"/>
+        <Label Content="Enter your surname:" Canvas.Top="100" />
+        <TextBox x:Name="surname_txtbox" MinWidth="100" Canvas.Top="105" Canvas.Left="120"/>
+        <Label Content="Enter date of birth:" Canvas.Top="150" />
+        <TextBox x:Name="dob_txtbox" MinWidth="100" Canvas.Top="155" Canvas.Left="110"/>
+        <Label Content="Enter PESEL (if you have):" Canvas.Top="200" />
+        <TextBox x:Name="pesel_txtbox" MinWidth="100" Canvas.Top="205" Canvas.Left="140"/>
+
+        <Button Content="Submit" Click="Button_Click"/>
+
+    </Canvas>
+</Window>

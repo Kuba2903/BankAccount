@@ -39,7 +39,7 @@
 
         <TextBlock Text="ATM Application Software" VerticalAlignment="Center" HorizontalAlignment="Center"
                    FontSize="30" Margin="0,70,0,0"/>
-        <Button x:Name="open_accountBtn" Content="Open new account" Style="{StaticResource buttonStyle}"/>
+        <Button x:Name="open_accountBtn" Content="Open new account" Style="{StaticResource buttonStyle}" Click="open_accountBtn_Click"/>
         <Button x:Name="log_accountBtn" Content="Log to the account" Style="{StaticResource buttonStyle}"/>
 
     </StackPanel>
