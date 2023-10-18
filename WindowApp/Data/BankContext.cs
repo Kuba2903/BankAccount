@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using WindowApp.Models;
-
+using WindowApp;
+using WindowApp.DBModels;
 namespace WindowApp.Data;
 
 public partial class BankContext : DbContext
@@ -31,6 +31,9 @@ public partial class BankContext : DbContext
             entity.HasIndex(e => e.Pesel, "UQ__Accounts__DC3B1BB8C1BA6E7D").IsUnique();
 
             entity.Property(e => e.AccountId).HasColumnName("account_id");
+            entity.Property(e => e.Budget)
+                .HasColumnType("money")
+                .HasColumnName("budget");
             entity.Property(e => e.DateOfBirth)
                 .HasColumnType("date")
                 .HasColumnName("date_of_birth");

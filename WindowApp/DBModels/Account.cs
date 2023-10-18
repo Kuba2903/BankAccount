@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WindowApp.Models;
+namespace WindowApp.DBModels;
 
 public partial class Account
 {
@@ -14,4 +14,6 @@ public partial class Account
     public DateTime DateOfBirth { get; set; }
 
     public string? Pesel { get; set; }
+
+    public decimal? Budget { get; set; }
 }

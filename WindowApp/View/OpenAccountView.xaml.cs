@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WindowApp.Data;
-using WindowApp.Models;
+using WindowApp.DBModels;
+using WindowApp.ViewModel;
 
 namespace WindowApp.View
 {
@@ -23,23 +24,9 @@ namespace WindowApp.View
     {
         public OpenAccountView()
         {
-            InitializeComponent(); 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            BankContext bank = new BankContext();
-
-            Account account = new Account()
-            {
-                Name = name_txtbox.Text,
-                Surname = surname_txtbox.Text,
-                DateOfBirth = DateTime.Parse(dob_txtbox.Text),
-                Pesel = pesel_txtbox.Text
-            };
-            MessageBox.Show("Success");
-            bank.Accounts.Add(account);
-            bank.SaveChanges();
+            InitializeComponent();
+            OpenAccountViewModel model = new OpenAccountViewModel();
+            this.DataContext = model;
         }
     }
 }

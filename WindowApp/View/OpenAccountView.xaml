@@ -8,15 +8,15 @@
         Title="OpenAccountView" Height="300" Width="400">
     <Canvas>
         <Label Content="Enter your name:" Canvas.Top="50" />
-        <TextBox x:Name="name_txtbox" MinWidth="100" Canvas.Top="55" Canvas.Left="100"/>
+        <TextBox Text="{Binding Name}" MinWidth="100" Canvas.Top="55" Canvas.Left="100"/>
         <Label Content="Enter your surname:" Canvas.Top="100" />
-        <TextBox x:Name="surname_txtbox" MinWidth="100" Canvas.Top="105" Canvas.Left="120"/>
+        <TextBox Text="{Binding Surname}" MinWidth="100" Canvas.Top="105" Canvas.Left="120"/>
         <Label Content="Enter date of birth:" Canvas.Top="150" />
-        <TextBox x:Name="dob_txtbox" MinWidth="100" Canvas.Top="155" Canvas.Left="110"/>
+        <TextBox Text="{Binding Date_Of_Birth}" MinWidth="100" Canvas.Top="155" Canvas.Left="110"/>
         <Label Content="Enter PESEL (if you have):" Canvas.Top="200" />
-        <TextBox x:Name="pesel_txtbox" MinWidth="100" Canvas.Top="205" Canvas.Left="140"/>
+        <TextBox Text="{Binding Pesel}" MinWidth="100" Canvas.Top="205" Canvas.Left="140"/>
 
-        <Button Content="Submit" Click="Button_Click"/>
+        <Button Content="Submit" Command="{Binding AddPersonCommand}"/>
 
     </Canvas>
 </Window>

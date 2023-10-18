@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WindowApp.ViewModel;
 
 namespace WindowApp.View
 {
@@ -22,13 +23,8 @@ namespace WindowApp.View
         public StartWindow()
         {
             InitializeComponent();
-        }
-
-        private void open_accountBtn_Click(object sender, RoutedEventArgs e)
-        {
-            OpenAccountView view = new OpenAccountView();
-            view.Show();
-            this.Close();
+            StartWindowViewModel viewModel = new StartWindowViewModel();
+            this.DataContext = viewModel;
         }
     }
 }
