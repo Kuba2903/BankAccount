@@ -38,9 +38,10 @@
         </StackPanel.Resources>
 
         <TextBlock Text="ATM Application Software" VerticalAlignment="Center" HorizontalAlignment="Center"
-                   FontSize="30" Margin="0,70,0,0"/>
-        <Button x:Name="open_accountBtn" Content="Open new account" Style="{StaticResource buttonStyle}" Command="{Binding ShowWindowCommand}"/>
-        <Button x:Name="log_accountBtn" Content="Log to the account" Style="{StaticResource buttonStyle}"/>
+                   FontSize="30" Margin="0,30,0,0"/>
+        <Button Content="Open new account" Style="{StaticResource buttonStyle}" Command="{Binding ShowOpenAccountCommand}"/>
+        <Button Content="Log to the account" Style="{StaticResource buttonStyle}" Command="{Binding ShowLogAccountCommand}"/>
+        <Button Content="Close the app" Style="{StaticResource buttonStyle}"/>
 
     </StackPanel>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\bigie\source\repos\Bank Account\WindowApp\App.xaml
-2-1782617066
+4-1595751416
 
-11212716075
+15-1252058829
 222-1647400559
-View\OpenAccountView.xaml;View\StartWindow.xaml;
+View\AccountMenuView.xaml;View\LogAccountView.xaml;View\OpenAccountView.xaml;View\StartWindow.xaml;
 
-False
+True
 

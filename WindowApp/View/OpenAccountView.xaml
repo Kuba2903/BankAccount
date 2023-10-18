@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowApp.View"
         mc:Ignorable="d"
-        Title="OpenAccountView" Height="300" Width="400">
+        Title="OpenAccountView" Height="300" Width="400"
+        ResizeMode="NoResize">
     <Canvas>
         <Label Content="Enter your name:" Canvas.Top="50" />
         <TextBox Text="{Binding Name}" MinWidth="100" Canvas.Top="55" Canvas.Left="100"/>
         <Label Content="Enter your surname:" Canvas.Top="100" />
         <TextBox Text="{Binding Surname}" MinWidth="100" Canvas.Top="105" Canvas.Left="120"/>
         <Label Content="Enter date of birth:" Canvas.Top="150" />
-        <TextBox Text="{Binding Date_Of_Birth}" MinWidth="100" Canvas.Top="155" Canvas.Left="110"/>
+        <TextBox Text="{Binding Date_Of_Birth,StringFormat=dd/mm/yyyy}" MinWidth="100" Canvas.Top="155" Canvas.Left="110"/>
         <Label Content="Enter PESEL (if you have):" Canvas.Top="200" />
-        <TextBox Text="{Binding Pesel}" MinWidth="100" Canvas.Top="205" Canvas.Left="140"/>
+        <TextBox Text="{Binding Pesel}" MinWidth="100" Canvas.Top="205" Canvas.Left="140" MaxLength="11"/>
 
-        <Button Content="Submit" Command="{Binding AddPersonCommand}"/>
+        <Button Content="Submit" Command="{Binding AddPersonCommand}" Canvas.Top="240" Canvas.Left="170"/>
 
     </Canvas>
 </Window>

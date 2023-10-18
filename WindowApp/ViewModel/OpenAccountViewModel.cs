@@ -29,18 +29,21 @@ namespace WindowApp.ViewModel
 
         private void AddUser(object obj)
         {
-            BankContext bank = new BankContext();
-
-            Account account = new Account()
+            try
             {
-                Name = Name,
-                Surname = Surname,
-                DateOfBirth = Date_Of_Birth,
-                Pesel = Pesel
-            };
-            MessageBox.Show("Success");
-            bank.Accounts.Add(account);
-            bank.SaveChanges();
+                BankContext bank = new BankContext();
+
+                Account account = new Account()
+                {
+                    Name = Name,
+                    Surname = Surname,
+                    DateOfBirth = Date_Of_Birth,
+                    Pesel = Pesel
+                };
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

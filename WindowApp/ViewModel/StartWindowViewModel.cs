@@ -11,16 +11,26 @@ namespace WindowApp.ViewModel
 {
     public class StartWindowViewModel
     {
-        public ICommand ShowWindowCommand { get; set; }
+        public ICommand ShowOpenAccountCommand { get; set; }
+        public ICommand ShowLogAccountCommand { get; set; }
 
         public StartWindowViewModel()
         {
-            ShowWindowCommand = new RelayCommand(ShowWindow, CanShowWindow);
+            ShowOpenAccountCommand = new RelayCommand(ShowOpenAccount, CanShowOpenAccount);
+            ShowLogAccountCommand = new RelayCommand(ShowLogAccount, CanShowLogAccount);
         }
 
-        private bool CanShowWindow(object obj) => true;
+        private bool CanShowLogAccount(object obj) => true;
 
-        private void ShowWindow(object obj)
+        private void ShowLogAccount(object obj)
+        {
+            LogAccountView view = new LogAccountView();
+            view.Show();
+        }
+
+        private bool CanShowOpenAccount(object obj) => true;
+
+        private void ShowOpenAccount(object obj)
         {
             OpenAccountView view = new OpenAccountView();
             view.Show();

@@ -66,3 +66,7 @@ C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\Wind
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\WindowApp.csproj.CopyComplete
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\OpenAccountView.g.cs
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\OpenAccountView.baml
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\LogAccountView.g.cs
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\LogAccountView.baml
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\AccountMenuView.g.cs
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\AccountMenuView.baml
