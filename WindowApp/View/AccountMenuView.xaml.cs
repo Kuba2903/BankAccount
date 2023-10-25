@@ -26,5 +26,18 @@ namespace WindowApp.View
             AccountMenuViewModel viewModel = new AccountMenuViewModel();
             this.DataContext = viewModel;
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SendMoneyView view = new SendMoneyView();
+            this.Close();
+            view.Show();
+        }
     }
 }

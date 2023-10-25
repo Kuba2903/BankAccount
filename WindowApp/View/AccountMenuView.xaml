@@ -19,5 +19,23 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Label Content="Hello" FontSize="23" Grid.Column="1"/>
+        <Label Content="{Binding Name}" Margin="0,0,40,0" Grid.Column="1" HorizontalAlignment="Right" FontSize="23"/>
+        <Label Content="Today is:" FontSize="23" Grid.Column="1" VerticalAlignment="Center"/>
+        <Label Content="{Binding Date, StringFormat=dd-MM-yyyy}" FontSize="23" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
+
+        <TextBox Width="100" Height="30" VerticalAlignment="Bottom" Text="{Binding Value}"/>
+        <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Width="auto" Content="Make a deposit"
+                Margin="15" FontSize="27" Command="{Binding DepositCommand}"/>
+        <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="1" Width="auto" Content="Make a withdrawl"
+                Margin="15" FontSize="27" Command="{Binding WithdrawlCommand}"/>
+        <Label Content="Your budget is :$" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"
+               FontSize="17" FontWeight="Bold"/>
+        <Label Content="{Binding Budget,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"
+               FontSize="17" FontWeight="Bold"/>
+        <Button Style="{StaticResource buttonStyle}" Grid.Row="2" Grid.Column="1" Width="auto" Content="Send money"
+                Margin="15" FontSize="27" Click="Button_Click"/>
+        <Button Style="{StaticResource buttonStyle}" Grid.Row="2" Grid.Column="0" Width="auto" Content="Update"
+                Margin="15" FontSize="27" Command="{Binding UpdateCommand,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>

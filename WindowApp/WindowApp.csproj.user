@@ -16,7 +16,10 @@
     <Compile Update="View\OpenAccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\StartWindow.xaml.cs">
+    <Compile Update="View\SendMoneyView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StartWindowView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,7 +33,10 @@
     <Page Update="View\OpenAccountView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\StartWindow.xaml">
+    <Page Update="View\SendMoneyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StartWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

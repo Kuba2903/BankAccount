@@ -28,5 +28,11 @@ namespace WindowApp.View
             OpenAccountViewModel model = new OpenAccountViewModel();
             this.DataContext = model;
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
     }
 }

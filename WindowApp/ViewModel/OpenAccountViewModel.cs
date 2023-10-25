@@ -29,6 +29,7 @@ namespace WindowApp.ViewModel
 
         private void AddUser(object obj)
         {
+            bool added = false;
             try
             {
                 BankContext bank = new BankContext();
@@ -40,10 +41,15 @@ namespace WindowApp.ViewModel
                     DateOfBirth = Date_Of_Birth,
                     Pesel = Pesel
                 };
+                bank.Add(account);
+                bank.SaveChanges();
+                added = true;
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            if(added)
+                MessageBox.Show("Success");
         }
     }
 }

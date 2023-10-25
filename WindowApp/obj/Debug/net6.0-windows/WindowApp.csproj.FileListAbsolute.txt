@@ -3,11 +3,9 @@ C:\Users\bigie\source\repos\Bank Account\WindowApp\bin\Debug\net6.0-windows\Wind
 C:\Users\bigie\source\repos\Bank Account\WindowApp\bin\Debug\net6.0-windows\WindowApp.runtimeconfig.json
 C:\Users\bigie\source\repos\Bank Account\WindowApp\bin\Debug\net6.0-windows\WindowApp.dll
 C:\Users\bigie\source\repos\Bank Account\WindowApp\bin\Debug\net6.0-windows\WindowApp.pdb
-C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\StartWindow.g.cs
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\WindowApp_MarkupCompile.cache
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\WindowApp_MarkupCompile.lref
-C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\StartWindow.baml
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\WindowApp.g.resources
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\WindowApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\WindowApp.AssemblyInfoInputs.cache
@@ -70,3 +68,8 @@ C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\LogAccountView.baml
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\AccountMenuView.g.cs
 C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\AccountMenuView.baml
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\App.baml
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\SendMoneyView.g.cs
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\SendMoneyView.baml
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\StartWindowView.g.cs
+C:\Users\bigie\source\repos\Bank Account\WindowApp\obj\Debug\net6.0-windows\View\StartWindowView.baml

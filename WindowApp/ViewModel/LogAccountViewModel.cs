@@ -32,11 +32,22 @@ namespace WindowApp.ViewModel
             if (context.Accounts.Any(x => (x.AccountId == Id) && (x.Pesel == Pesel)))
             {
                 MessageBox.Show("Success");
+                SaveData(context);
                 AccountMenuView view = new AccountMenuView();
                 view.Show();
             }
             else
                 MessageBox.Show("Account not find");
+        }
+
+        private void SaveData(BankContext context)
+        {
+            var accounts = context.Accounts.FirstOrDefault(x => x.AccountId == Id && x.Pesel == Pesel);
+            Globals.Name = accounts.Name + " " + accounts.Surname;
+            Globals.Budget = accounts.Budget;
+            Globals.Id = accounts.AccountId;
+            Globals.Pesel = accounts.Pesel;
+            Globals.DateOfBirth = accounts.DateOfBirth;
         }
     }
 }
