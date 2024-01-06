@@ -15,5 +15,6 @@ namespace WindowApp
         public static DateTime DateOfBirth { get; set; }
 
         public static string? Pesel { get; set; }
+        public static string? Password { get; set; }
     }
 }

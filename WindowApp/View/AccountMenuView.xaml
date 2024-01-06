@@ -23,7 +23,11 @@
         <Label Content="{Binding Name}" Margin="0,0,40,0" Grid.Column="1" HorizontalAlignment="Right" FontSize="23"/>
         <Label Content="Today is:" FontSize="23" Grid.Column="1" VerticalAlignment="Center"/>
         <Label Content="{Binding Date, StringFormat=dd-MM-yyyy}" FontSize="23" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
+        <Label Content="Your id: " Grid.Column="2" FontSize="15" />
+        <TextBlock Text="{Binding Id}" Grid.Column="2" HorizontalAlignment="Center" Margin="0,3,135,0" FontSize="15" />
 
+        <Label Content="Enter amount of money before making an action" VerticalAlignment="Top"
+               Margin="5,81,7,0" Height="23" />
         <TextBox Width="100" Height="30" VerticalAlignment="Bottom" Text="{Binding Value}"/>
         <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Width="auto" Content="Make a deposit"
                 Margin="15" FontSize="27" Command="{Binding DepositCommand}"/>

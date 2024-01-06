@@ -8,10 +8,11 @@
         Title="LogAccountView" Height="200" Width="300"
         ResizeMode="NoResize">
     <StackPanel>
-        <Label Content="Enter your Id" HorizontalAlignment="Center" Margin="0,10,0,0" />
-        <TextBox MinWidth="100" HorizontalAlignment="Center" Text="{Binding Id}"/>
-        <Label Content="Enter your Pesel" HorizontalAlignment="Center" Margin="0,10,0,0"/>
-        <TextBox MinWidth="100" HorizontalAlignment="Center" Text="{Binding Pesel}" MaxLength="11"/>
+        <Label Content="Enter your surname" HorizontalAlignment="Center" Margin="0,10,0,0" />
+        <TextBox MinWidth="100" HorizontalAlignment="Center" Text="{Binding Surname}"/>
+        <Label Content="Enter your password" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+        <TextBox MinWidth="100" HorizontalAlignment="Center" Text="{Binding Password}" MaxLength="11"
+                 />
         <Button Content="Log in" HorizontalAlignment="Center" Margin="0,20,0,0" Command="{Binding LogAccountCommand}"
                 Style="{StaticResource buttonStyle}" FontSize="16" Width="70" Click="Button_Click"/>
     </StackPanel>

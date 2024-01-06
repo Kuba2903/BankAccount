@@ -6,17 +6,21 @@
         xmlns:local="clr-namespace:WindowApp.View"
         mc:Ignorable="d"
         Title="OpenAccountView" Height="300" Width="400"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        >
     <Canvas>
-        <Label Content="Enter your name:" Canvas.Top="50" />
-        <TextBox Text="{Binding Name}" MinWidth="100" Canvas.Top="55" Canvas.Left="100"/>
-        <Label Content="Enter your surname:" Canvas.Top="100" />
-        <TextBox Text="{Binding Surname}" MinWidth="100" Canvas.Top="105" Canvas.Left="120"/>
-        <Label Content="Enter date of birth:" Canvas.Top="150" />
-        <TextBox Text="{Binding Date_Of_Birth, StringFormat=dd-MM-yyyy}" MinWidth="100" Canvas.Top="155" Canvas.Left="110"/>
-        <Label Content="Enter PESEL (if you have):" Canvas.Top="200" />
-        <TextBox Text="{Binding Pesel}" MinWidth="100" Canvas.Top="205" Canvas.Left="140" MaxLength="11"/>
-
+        <Label Content="Enter your name:" Canvas.Top="20" />
+        <TextBox Text="{Binding Name}" MinWidth="100" Canvas.Top="25" Canvas.Left="100"/>
+        <Label Content="Enter your surname:" Canvas.Top="70" />
+        <TextBox Text="{Binding Surname}" MinWidth="100" Canvas.Top="75" Canvas.Left="120"/>
+        <Label Content="Enter date of birth:" Canvas.Top="120" />
+        <DatePicker SelectedDate="{Binding Date_Of_Birth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Top="120" 
+                    Canvas.Left="110" DisplayDateStart="01/01/1950" DisplayDateEnd="{Binding TodayDate}" SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+        <Label Content="Enter PESEL (if you have):" Canvas.Top="170" />
+        <TextBox Text="{Binding Pesel}" MinWidth="100" Canvas.Top="175" Canvas.Left="140" MaxLength="11"/>
+        <Label Content="Enter password" Canvas.Top="200" />
+        <TextBox Text="{Binding Password}" MinWidth="100" Canvas.Top="205" Canvas.Left="100"
+                  />
         <Button Content="Submit" Command="{Binding AddPersonCommand}" Canvas.Top="170" Canvas.Left="170"
                 Style="{StaticResource buttonStyle}" FontSize="12" Width="60"/>
 

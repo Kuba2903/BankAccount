@@ -28,7 +28,7 @@ public partial class BankContext : DbContext
         {
             entity.HasKey(e => e.AccountId).HasName("PK__Accounts__46A222CDE41DA9CA");
 
-            entity.HasIndex(e => e.Pesel, "UQ__Accounts__DC3B1BB8C1BA6E7D").IsUnique();
+            entity.HasIndex(e => e.Pesel);
 
             entity.Property(e => e.AccountId).HasColumnName("account_id");
             entity.Property(e => e.Budget)
@@ -50,6 +50,10 @@ public partial class BankContext : DbContext
                 .HasMaxLength(25)
                 .IsUnicode(false)
                 .HasColumnName("surname");
+            entity.Property(e => e.Password)
+            .HasMaxLength(30)
+            .IsRequired()
+            .HasColumnName("password");
         });
 
         OnModelCreatingPartial(modelBuilder);

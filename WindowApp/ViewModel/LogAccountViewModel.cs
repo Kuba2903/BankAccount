@@ -14,8 +14,8 @@ namespace WindowApp.ViewModel
 {
     public class LogAccountViewModel
     {
-        public int Id { get; set; }
-        public string Pesel { get; set; }
+        public string Surname { get; set; }
+        public string Password { get; set; }
 
         public ICommand LogAccountCommand { get; set; }
         public LogAccountViewModel()
@@ -29,7 +29,7 @@ namespace WindowApp.ViewModel
         {
             BankContext context = new BankContext(); 
 
-            if (context.Accounts.Any(x => (x.AccountId == Id) && (x.Pesel == Pesel)))
+            if (context.Accounts.Any(x => (x.Surname == Surname) && (x.Password == Password)))
             {
                 MessageBox.Show("Success");
                 SaveData(context);
@@ -42,12 +42,13 @@ namespace WindowApp.ViewModel
 
         private void SaveData(BankContext context)
         {
-            var accounts = context.Accounts.FirstOrDefault(x => x.AccountId == Id && x.Pesel == Pesel);
+            var accounts = context.Accounts.FirstOrDefault(x => x.Surname == Surname && x.Password == Password);
             Globals.Name = accounts.Name + " " + accounts.Surname;
             Globals.Budget = accounts.Budget;
             Globals.Id = accounts.AccountId;
             Globals.Pesel = accounts.Pesel;
             Globals.DateOfBirth = accounts.DateOfBirth;
+            Globals.Password = accounts.Password;
         }
     }
 }

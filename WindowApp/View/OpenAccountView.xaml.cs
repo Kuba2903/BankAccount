@@ -34,5 +34,16 @@ namespace WindowApp.View
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DatePicker datePicker = sender as DatePicker;
+            DateTime? selectedDate = datePicker.SelectedDate;
+
+            if (selectedDate.HasValue && selectedDate < new DateTime(1950, 1, 1))
+            {
+                datePicker.SelectedDate = new DateTime(1950, 1, 1);
+            }
+        }
     }
 }

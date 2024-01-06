@@ -12,6 +12,7 @@ public partial class Account
     public string Surname { get; set; } = null!;
 
     public DateTime DateOfBirth { get; set; }
+    public string Password { get; set; } = null!;
 
     public string? Pesel { get; set; }
 
